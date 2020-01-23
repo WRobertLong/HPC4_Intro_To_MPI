@@ -18,7 +18,7 @@
 #$ -ar 6
 #-------------------------------------------------
 # launch program
-mpirun ./helloworld
+mpirun ./broadcast
 #-------------------------------------------------
 # To monitor the memory used by your code, execute
 # mpirun /apps/bin/memmon helloworld

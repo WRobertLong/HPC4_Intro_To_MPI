@@ -1,22 +1,11 @@
-
 #include <stdio.h>
 #include <mpi.h>
 
 int main (int argc, char *argv[]) {
-
-  int rank, size;
-  
-  MPI_Init(&argc, &argv);
-
-  MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-  MPI_Comm_size(MPI_COMM_WORLD, &size);
-  
-//  printf("Hello from rank %d of size %d.\n", rank, size);
- 
-  if ( rank == 0 ) {
-    printf("Hello from rank %d of size %d.\n", rank, size);
-  }
- 
-  MPI_Finalize();
-
+   
+   MPI_Init(&argc, &argv); /* initialise MPI */
+   
+   printf("Hello World\n"); 
+   
+   MPI_Finalize(); /* finalise MPI */
 }

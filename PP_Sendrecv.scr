@@ -1,0 +1,28 @@
+# ARC4 job submission script for MPI training course
+#-------------------------------------------------
+# Use current working directory, export currently loaded modules
+#$ -cwd -V
+#-------------------------------------------------
+# EITHER request 4 processors for small parallel MPI test job compiled with 'openmpi' default
+#   Note: this cannot be used for executables compiled under the 'IntelMPI' library
+#$ -pe ib 2
+# OR request numbers of whole nodes for larger parallel MPI runs on ARC2
+#   Note: Please use the '-l np=<num>' or '-l nodes=<num>' parallel job syntax
+#   when running under the IntelMPI library from the batch queues.
+###### -l nodes=1
+#-------------------------------------------------
+# request one hour of runtime (HH:MM:SS)
+#$ -l h_rt=01:00:00
+#-------------------------------------------------
+# request access to the ARC4 special resources for this training course
+#$ -ar 6
+#-------------------------------------------------
+# launch program
+mpirun ./PP_Sendrecv
+#-------------------------------------------------
+# To monitor the memory used by your code, execute
+# mpirun /apps/bin/memmon helloworld
+#-------------------------------------------------
+# For more job submission information, visit:
+# http://arc.leeds.ac.uk
+# Using -> What is a scheduler? -> The Scheduler: SGE -> SGE:Examples
