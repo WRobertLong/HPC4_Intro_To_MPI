@@ -1,0 +1,10 @@
+# Ignore everything
+*
+
+# But not these files...
+!*.c
+!*.scr
+!*.sh
+!.gitignore
+
+
