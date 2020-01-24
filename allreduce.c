@@ -1,3 +1,13 @@
+/*
+
+Robert Long 23 Jan 2020
+
+HPC4 course
+
+MPI All reducen practical
+
+*/ 
+
 #include <mpi.h>
 #include <stdio.h>
 
